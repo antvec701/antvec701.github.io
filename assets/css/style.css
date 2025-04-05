@@ -443,17 +443,23 @@ main {
   font-size: 18px;
 }
 
+.social-item .social-link {
+  color: var(--light-gray-70);
+  font-size: 18px;
+}
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
 .social-icon {
-  width: 7px;  /* Adjust the size as needed */
+  width: 18px;  /* Adjust the size as needed */
   height: auto;
   cursor: pointer;  /* Makes it look like a clickable button */
   transition: transform 0.3s ease;  /* Adds a smooth hover effect */
 }
 
-.social-icon:hover  { color: var(--light-gray); }
+.social-icon:hover {
+  transform: scale(1.1);  /* Slightly enlarge the image on hover */
+}
 
 
 
