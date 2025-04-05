@@ -354,6 +354,12 @@ main {
   border-radius: 8px;
 }
 
+.center-text {
+  display: block;  /* Makes @ Notre Dame a block element so it can be centered */
+  font-size: var(--fs-8); /* Adjust the font size for the @ Notre Dame text */
+  margin-top: 5px; /* Optional: Adjust the space between "Economics PhD Student" and "@ Notre Dame" */
+}
+
 .info_more-btn {
   position: absolute;
   top: -15px;
