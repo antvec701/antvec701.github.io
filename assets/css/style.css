@@ -447,7 +447,7 @@ main {
 .social-item .social-link:hover { color: var(--light-gray); }
 
 .social-icon {
-  width: 4px;  /* Adjust the size as needed */
+  width: 7px;  /* Adjust the size as needed */
   height: auto;
   cursor: pointer;  /* Makes it look like a clickable button */
   transition: transform 0.3s ease;  /* Adds a smooth hover effect */
