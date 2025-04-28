@@ -571,6 +571,30 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.about-click {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  border: 1px solid transparent; /* <-- Set a default transparent border */
+  transition: border-color 0.3s ease; /* <-- Smooth transition for the hover effect */
+}
+
+.about-click-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
+}
+
+.about-click:hover,
+.about-click:focus {
+  color: var(--light-gray-70);
+  border-color: var(--bg-gradient-yellow-1); /* <-- Change border color on hover/focus */
+}
+
 
 
 /**
