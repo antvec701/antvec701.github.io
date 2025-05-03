@@ -573,20 +573,20 @@ main {
 
 .about-click {
   position: relative;
-  display: inline-block; /* <-- This makes the button size to fit the text */
+  display: inline-block;
   background: var(--border-gradient-onyx);
-  padding: 20px; /* <-- Optional: you can adjust padding to taste */
+  padding: 20px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
   transition: border-color 0.3s ease;
-  border: 1px solid transparent; /* Good to add this so hover works smoothly */
+  border: 1px solid transparent;
 }
 
 .about-click:hover,
 .about-click:focus {
   color: var(--text-gradient-yellow);
-  border-color: var(--text-gradient-yellow);
+  border-color: hsl(88, 100%, 32%);
 }
 
 
