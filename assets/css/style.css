@@ -671,6 +671,11 @@ main {
   top: 0;
   left: 0;
   transform: translate(15px, -25px);
+  width: 60px; /* adjust as needed */
+  height: 60px; /* adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
