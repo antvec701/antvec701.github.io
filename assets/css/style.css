@@ -678,6 +678,11 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-1);
   box-sizing: border-box; /* ensures padding doesn't break layout */
+  display: flex;              /* Added for centering */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+  z-index: 1;                 /* Ensure it appears above but doesn't block text */
+
 }
 
 .testimonials-item-title { margin-bottom: 7px; }
