@@ -645,9 +645,7 @@ main {
 
 .testimonials { margin-bottom: 30px; }
 
-.testimonials-title { 
-  margin-bottom: 20px;
-  margin-left: 20px;}
+.testimonials-title { margin-bottom: 20px; }
 
 .testimonials-list {
   display: flex;
@@ -680,7 +678,10 @@ main {
   box-sizing: border-box; /* ensures padding doesn't break layout */
 }
 
-.testimonials-item-title { margin-bottom: 7px; }
+.testimonials-item-title { 
+  margin-bottom: 7px; 
+  margin-left: 7px;
+}
 
 .testimonials-text {
   margin-top: 20px;
