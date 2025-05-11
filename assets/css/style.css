@@ -645,7 +645,9 @@ main {
 
 .testimonials { margin-bottom: 30px; }
 
-.testimonials-title { margin-bottom: 20px; }
+.testimonials-title { 
+  margin-bottom: 20px;
+  margin-left: 20px;}
 
 .testimonials-list {
   display: flex;
@@ -676,13 +678,12 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-1);
   box-sizing: border-box; /* ensures padding doesn't break layout */
-  margin-right: 15px; /* if avatar is beside text */
-  margin-bottom: 15px; /* if avatar is above text */
 }
 
 .testimonials-item-title { margin-bottom: 7px; }
 
 .testimonials-text {
+  margin-top: 20px;
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
