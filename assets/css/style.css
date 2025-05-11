@@ -671,7 +671,7 @@ main {
   top: 0;
   left: 0;
   transform: translate(15px, -25px);
-  padding: 5px; /* Adjust this to center the image visually */
+  padding: 15px; /* Adjust this to center the image visually */
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
