@@ -662,6 +662,7 @@ main {
 }
 
 .testimonials-item {
+  position: relative;
   min-width: 100%;
   scroll-snap-align: center;
 }
@@ -674,6 +675,7 @@ main {
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
+  padding: 10px;
 }
 
 .testimonials-item-title { margin-bottom: 7px; }
@@ -687,7 +689,7 @@ main {
   line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: visible;
 }
 
 
