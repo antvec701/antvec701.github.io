@@ -592,6 +592,7 @@ main {
   z-index: 1;
   transition: border-color 0.3s ease;
   border: 1px solid transparent;
+  margin-bottom: 15px;
 }
 
 .about-click:hover,
