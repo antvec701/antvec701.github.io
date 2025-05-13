@@ -690,7 +690,8 @@ main {
   padding: 10px;
 }
 
-.testimonials-item-title { 
+.testimonials-item-title {
+  margin-top: 50px;
   margin-bottom: 7px; 
 }
 
