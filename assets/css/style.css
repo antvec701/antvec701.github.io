@@ -691,6 +691,7 @@ main {
 }
 
 .testimonials-item-title {
+  position: relative;
   margin-bottom: 7px; 
 }
 
