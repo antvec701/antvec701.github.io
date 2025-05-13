@@ -326,6 +326,17 @@ article.active {
   z-index: 1;
 }
 
+.content-card-nopointer {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 15px;
+  padding-top: 45px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  cursor: default;
+  z-index: 1;
+}
+
 .content-card::before {
   content: "";
   position: absolute;
