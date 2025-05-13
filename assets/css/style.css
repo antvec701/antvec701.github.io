@@ -671,11 +671,9 @@ main {
   top: 0;
   left: 0;
   transform: translate(15px, -25px);
-  padding: 15px; /* Adjust this to center the image visually */
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
-  box-sizing: border-box; /* ensures padding doesn't break layout */
 }
 
 .testimonials-item-title { margin-bottom: 7px; }
@@ -697,6 +695,7 @@ main {
  * #testimonials-modal
  */
 
+/** 
 .modal-container {
   position: fixed;
   top: 0;
@@ -805,6 +804,8 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
+
+*/
 
 
 /**
