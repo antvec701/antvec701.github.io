@@ -678,13 +678,9 @@ main {
   box-sizing: border-box; /* ensures padding doesn't break layout */
 }
 
-.testimonials-item-title { 
-  margin-bottom: 7px; 
-  margin-left: 7px;
-}
+.testimonials-item-title { margin-bottom: 7px; }
 
 .testimonials-text {
-  margin-top: 20px;
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
