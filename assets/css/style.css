@@ -830,6 +830,7 @@ main {
  * #clients 
  */
 
+/**
 .clients { margin-bottom: 15px; }
 
 .clients-list {
@@ -859,6 +860,61 @@ main {
 }
 
 .clients-item img:hover { filter: grayscale(0); }
+
+*/
+
+.clients { margin-bottom: 30px; }
+
+.clients-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 25px;
+}
+
+.clients-item {
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  flex-shrink: 0;
+}
+
+.clients-item.horizontal {
+  width: 350px;
+  height: 225px; /* 16:10 or 3:2 aspect */
+}
+
+.clients-item.vertical {
+  width: 225px;
+  height: 350px; /* Portrait orientation */
+}
+
+.clients-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: var(--transition-1);
+}
+
+/* Caption style similar to testimonials */
+.clients-caption {
+  margin-top: 10px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+  padding-left: 5px;
+}
 
 
 
