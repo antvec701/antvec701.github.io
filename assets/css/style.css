@@ -882,7 +882,7 @@ main {
   scroll-snap-align: start;
   position: relative;
   border-radius: 16px;
-  overflow: visible;
+  overflow: hidden;
   box-shadow: var(--shadow-1);
   flex-shrink: 0;
 }
