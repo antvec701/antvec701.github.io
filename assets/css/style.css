@@ -692,12 +692,12 @@ main {
 
 .testimonials-item-title {
   margin-bottom: 7px; 
-  padding-left: 70px;
+  padding-left: 45px;
 }
 
 .testimonials-text {
   color: var(--light-gray);
-  padding-left: 10px;
+  padding-left: 15px;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
