@@ -516,6 +516,7 @@ main {
   height: auto;
   cursor: pointer;  /* Makes it look like a clickable button */
   transition: var(--transition-1);  /* Adds a smooth hover effect */
+  padding-bottom: 12px;
 }
 
 .social-icon:hover {
@@ -692,7 +693,13 @@ main {
 
 .testimonials-item-title {
   margin-bottom: 7px; 
-  padding-left: 45px;
+  padding-left: 0px;
+}
+
+@media (min-width: 600px) {
+  .testimonials-item-title {
+    padding-left: 45px; /* or 45px if that better matches avatar spacing */
+  }
 }
 
 .testimonials-text {
