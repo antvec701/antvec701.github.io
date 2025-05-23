@@ -870,7 +870,7 @@ main {
 
 */
 
-.clients { margin-bottom: 30px; }
+.clients { margin-bottom: 33px; }
 
 .clients-list {
   display: flex;
@@ -920,7 +920,7 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.4;
   padding-left: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 
 
