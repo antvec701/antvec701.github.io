@@ -453,16 +453,6 @@ main {
   transition: var(--transition-2);
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    max-height: none; /* Remove height restriction on mobile */
-  }
-
-  .sidebar.active {
-    max-height: none; /* Allow full expansion */
-  }
-}
-
 .sidebar.active .sidebar-info_more {
   opacity: 1;
   visibility: visible;
