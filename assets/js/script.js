@@ -161,18 +161,19 @@ for (let i = 0; i < formInputs.length; i++) {
 const navLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    const targetPage = link.dataset.navLink;  // Use the attribute value
-    pages.forEach(page => {
-      if (page.dataset.page === targetPage) {
-        page.classList.add("active");
-      } else {
-        page.classList.remove("active");
-      }
-    });
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", function () {
 
-    navLinks.forEach(nav => nav.classList.remove("active"));
-    link.classList.add("active");
-  });
+    for (let i = 0; i < pages.length; i++) {
+    if (this.dataset.navLink === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+       } else {
+        pages[i].classList.remove("active");
+        navLinks[i].classList.remove("active");
+      }
+    }
+
 });
+}
