@@ -166,14 +166,14 @@ for (let i = 0; i < navLinks.length; i++) {
     const navLinkValue = this.getAttribute("data-nav-link");
 
     // Remove active class from all navLinks and pages
-    navLinks.forEach((link) => link.classList.remove("  active"));
-    pages.forEach((page) => page.classList.remove("  active"));
+    navLinks.forEach((link) => link.classList.remove("active"));
+    pages.forEach((page) => page.classList.remove("active"));
 
     // Add active class to the clicked navLink and corresponding page
     this.classList.add("active");
     for (let j = 0; j < pages.length; j++) {
       if (navLinkValue === pages[j].getAttribute("data-page")) {
-        pages[j].classList.add("  active");
+        pages[j].classList.add("active");
         break; // Exit loop once the matching page is found
       }
     }
