@@ -137,26 +137,26 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 // page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+// const navigationLinks = document.querySelectorAll("[data-nav-link]");
+// const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+// for (let i = 0; i < navigationLinks.length; i++) {
+//   navigationLinks[i].addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
+//     for (let i = 0; i < pages.length; i++) {
+//       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+//         pages[i].classList.add("active");
+//         navigationLinks[i].classList.add("active");
+//         window.scrollTo(0, 0);
+//       } else {
+//         pages[i].classList.remove("active");
+//         navigationLinks[i].classList.remove("active");
+//       }
+//     }
 
-  });
-}
+//   });
+// }
 
 // const navLinks = document.querySelectorAll("[data-nav-link]");
 // const pages = document.querySelectorAll("[data-page]");
@@ -181,3 +181,36 @@ for (let i = 0; i < navigationLinks.length; i++) {
 //     window.scrollTo(0, 0);
 //   });
 // }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.navbar-link');
+  const articles = document.querySelectorAll('article');
+
+  // Function to set active tab
+  function setActiveTab(targetLink) {
+    // Remove active class from all links and articles
+    navLinks.forEach(link => link.classList.remove('active'));
+    articles.forEach(article => article.classList.remove('active'));
+
+    // Add active class to clicked link and corresponding article
+    targetLink.classList.add('active');
+    const targetArticle = document.querySelector(`article[data-nav-link="${targetLink.dataset.navLink}"]`);
+    if (targetArticle) {
+      targetArticle.classList.add('active');
+    }
+  }
+
+  // Set default active tab to 'about'
+  const defaultLink = document.querySelector('.navbar-link[data-nav-link="about"]');
+  if (defaultLink) {
+    setActiveTab(defaultLink);
+  }
+
+  // Add click event listeners to navigation links
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      setActiveTab(link);
+    });
+  });
+});
