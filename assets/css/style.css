@@ -928,29 +928,35 @@ main {
 
 .article-title { margin-bottom: 30px; }
 
+
+
 .research-title { margin-bottom: 25px; }
 
 .research-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
-  line-height: 1.1;
+  line-height: 1.2;
+  margin-left: 2em; /* Indent abstracts */
 }
 
-.research-text p { 
-  margin-bottom: 15px; }
+.research-text p {
+  margin-bottom: 15px;
+  text-indent: -2em; /* Pull back paper title */
+  padding-left: 2em; /* Push rest to align after title */
+}
 
 .research-click {
   position: relative;
   display: inline-block;
   background: var(--border-gradient-onyx);
-  padding: 12px; /* reduced from 5px all around */
+  padding: 10px 16px; /* reduced from 5px all around */
   border-radius: 8px; /* less rounded */
   box-shadow: var(--shadow-2);
   z-index: 1;
   transition: border-color 0.3s ease;
   border: 1px solid transparent;
-  margin-bottom: 10px; /* reduced spacing below */
+  margin-bottom: 0 1em 15px 2em; /* reduced spacing below */
 }
 
 .research-click:hover,
@@ -963,12 +969,12 @@ main {
   position: relative;
   display: inline-block;
   background: var(--border-gradient-onyx);
-  padding: 12px; /* reduced from 20px */
+  padding: 10px 16px; /* reduced from 20px */
   border-radius: 8px;
   box-shadow: var(--shadow-2);
   z-index: 1;
   border: 1px solid transparent;
-  margin-bottom: 10px;
+  margin-bottom: 0 1em 15px 2em;
 }
 
 
