@@ -928,6 +928,50 @@ main {
 
 .article-title { margin-bottom: 30px; }
 
+.research-title { margin-bottom: 25px; }
+
+.research-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+.research-text p { margin-bottom: 15px; }
+
+.research-click {
+  position: relative;
+  display: inline-block;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  transition: border-color 0.3s ease;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+}
+
+.research-click:hover,
+.research-click:focus {
+  color: var(--text-gradient-yellow);
+  border-color: hsl(88, 100%, 32%);
+}
+
+.research-box {
+  position: relative;
+  display: inline-block;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  transition: border-color 0.3s ease;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+}
+
+
 
 /**
  * education and experience 
