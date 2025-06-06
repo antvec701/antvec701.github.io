@@ -950,7 +950,6 @@ main {
 }
 
 .paper-item p {
-  font-weight: bold;
   color: var(--light-gray);
   margin-bottom: 0.5em;
 }
@@ -960,7 +959,7 @@ blockquote {
   margin-top: 0;
   margin-bottom: 1em;
   padding-left: 1em;
-  border-left: 3px solid var(--light-gray);
+  border-left: 1px solid var(--light-gray);
 }
 
 .paper-buttons {
@@ -981,6 +980,7 @@ blockquote {
   z-index: 1;
   transition: border-color 0.3s ease;
   border: 1px solid transparent;
+  color: var(--light-gray);
 }
 
 .research-click:hover,
