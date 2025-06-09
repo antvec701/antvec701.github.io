@@ -930,9 +930,7 @@ main {
 
 
 
-.research-title { 
-  margin-bottom: 25px;
-  margin-top: 2.5em;}
+.research-title { margin-bottom: 25px; }
 
 .research-text {
   color: var(--light-gray);
@@ -945,6 +943,7 @@ main {
   list-style-type: none; /* remove bullets */
   padding-left: 0;
   margin-top: 0.5em;
+  margin-top: 2em;
 }
 
 .paper-item {
