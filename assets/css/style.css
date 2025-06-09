@@ -942,8 +942,8 @@ main {
 .paper-list {
   list-style-type: none; /* remove bullets */
   padding-left: 0;
-  margin-top: 2em;
-  margin-bottom: 3em;
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
 
 .paper-item {
@@ -953,6 +953,22 @@ main {
 .paper-item p {
   color: var(--light-gray);
   margin-bottom: 0.5em;
+}
+
+.toggle-abstract {
+  margin-top: 0.5em;
+  background: var(--border-gradient-onyx);
+  border: none;
+  color: var(--light-gray);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-abstract:hover {
+  color: var(--text-gradient-yellow);
+  border-color: hsl(88, 100%, 32%);
 }
 
 blockquote {
