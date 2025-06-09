@@ -955,6 +955,10 @@ main {
   margin-bottom: 0.5em;
 }
 
+.paper-hidden {
+  display: none;
+}
+
 .toggle-abstract {
   margin-top: 0.5em;
   background: var(--border-gradient-onyx);
