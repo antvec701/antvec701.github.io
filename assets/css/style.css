@@ -931,8 +931,8 @@ main {
 
 
 .research-title { 
-  margin-bottom: 2.5em;
-  margin-top: 5em;}
+  margin-bottom: 25px;
+  margin-top: 2.5em;}
 
 .research-text {
   color: var(--light-gray);
@@ -954,26 +954,6 @@ main {
 .paper-item p {
   color: var(--light-gray);
   margin-bottom: 0.5em;
-}
-
-.paper-hidden {
-  display: none;
-}
-
-.toggle-abstract {
-  margin-top: 0.5em;
-  background: var(--border-gradient-onyx);
-  border: none;
-  color: var(--light-gray);
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.toggle-abstract:hover {
-  color: var(--text-gradient-yellow);
-  border-color: hsl(88, 100%, 32%);
 }
 
 blockquote {
