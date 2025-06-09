@@ -157,3 +157,12 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+    // for toggling abstracts on research tab
+    document.querySelectorAll('.toggle-abstract').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const abstractSection = this.nextElementSibling;
+        abstractSection.classList.toggle('paper-hidden');
+        this.textContent = abstractSection.classList.contains('hidden') ? 'Show Details' : 'Hide Details';
+      });
+    });
