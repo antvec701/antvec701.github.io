@@ -947,6 +947,50 @@ main {
   line-height: 1.4;
 }
 
+.paper-title-toggle {
+  width: 100%;
+  color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 0;
+  margin-bottom: 0.5em;
+  transition: transform var(--transition-1), color var(--transition-1);
+}
+
+.paper-title-toggle:hover,
+.paper-title-toggle:focus {
+  color: var(--orange-yellow-crayola);
+  transform: scale(1.015);
+}
+
+.paper-title-toggle ion-icon {
+  min-width: 18px;
+  color: var(--orange-yellow-crayola);
+  transition: transform var(--transition-1);
+}
+
+.paper-title-toggle.active ion-icon {
+  transform: rotate(180deg);
+}
+
+.paper-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height var(--transition-2), opacity var(--transition-1);
+}
+
+.paper-details.active {
+  max-height: 900px;
+  opacity: 1;
+}
+
+.paper-details blockquote {
+  margin-top: 0.25em;
+}
+
 .paper-list {
   list-style-type: none; /* remove bullets */
   padding-left: 0;
