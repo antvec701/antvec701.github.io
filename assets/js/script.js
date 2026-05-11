@@ -174,3 +174,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+// collapsible research paper details
+const paperToggles = document.querySelectorAll("[data-paper-toggle]");
+
+for (let i = 0; i < paperToggles.length; i++) {
+  paperToggles[i].addEventListener("click", function () {
+    const paperItem = this.closest(".paper-item");
+    const paperDetails = paperItem.querySelector("[data-paper-details]");
+
+    if (!paperDetails) return;
+
+    const isOpen = paperDetails.classList.toggle("active");
+    this.classList.toggle("active", isOpen);
+    this.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+}
