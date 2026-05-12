@@ -2168,3 +2168,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* National Parks skills: two-column layout */
+
+.national-parks .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 15px;
+  margin-bottom: 32px; /* spacing below the skills box */
+}
+
+.national-parks .skills-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+/* mobile fallback */
+@media (max-width: 580px) {
+  .national-parks .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
