@@ -386,7 +386,7 @@ main {
   gap: 15px;
 }
 
-/* .avatar-box {
+.avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 24px;
   padding: 2px;
@@ -397,19 +397,15 @@ main {
   width: 112px;
   height: auto;
   border-radius: 20px;
-} */
+} 
 
-.avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 22px;
-  padding: 0;
-  flex-shrink: 0;
-}
-
-.avatar-box img {
-  width: 116px;
-  height: auto;
-  border-radius: 20px;
+/* desktop sidebar */
+@media (min-width: 1250px) {
+  .avatar-box img {
+    width: 220px;
+    height: auto;
+    border-radius: 28px;
+  }
 }
 
 .info-content .name {
