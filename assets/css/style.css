@@ -402,7 +402,7 @@ main {
 /* desktop sidebar */
 @media (min-width: 1250px) {
   .avatar-box img {
-    width: 220px;
+    width: 440px;
     height: auto;
     border-radius: 28px;
   }
