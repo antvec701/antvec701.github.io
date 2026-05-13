@@ -2190,7 +2190,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 }
 
-/* Text-only slider: same layout as testimonials, no avatar/title */
+/* Text-only slider: compact testimonial-style cards */
 
 .text-slider {
   margin-bottom: 30px;
@@ -2203,7 +2203,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .text-slider-list {
   display: flex;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px 15px;
@@ -2223,15 +2223,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 .text-slider-card {
   position: relative;
   background: var(--border-gradient-onyx);
-  padding: 28px;
+  padding: 15px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   cursor: default;
   z-index: 1;
-  min-height: 150px;
-
-  display: flex;
-  align-items: center;
+  width: 100%;
 }
 
 .text-slider-card::before {
@@ -2249,9 +2246,17 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-weight: var(--fw-300);
   line-height: 1.6;
   text-align: left;
-  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .text-slider-text p {
   margin-bottom: 0;
+}
+
+.national-parks p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
 }
