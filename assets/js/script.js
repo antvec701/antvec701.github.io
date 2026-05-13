@@ -191,3 +191,59 @@ for (let i = 0; i < paperToggles.length; i++) {
     this.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 }
+
+
+// National Parks tile overlay
+const parkTiles = document.querySelectorAll("[data-park-tile]");
+const parkOverlay = document.querySelector("[data-park-overlay]");
+const parkOverlayClose = document.querySelector("[data-park-overlay-close]");
+const parkOverlayImg = document.querySelector("[data-park-overlay-img]");
+const parkOverlayTitle = document.querySelector("[data-park-overlay-title]");
+const parkOverlayRating = document.querySelector("[data-park-overlay-rating]");
+const parkOverlayFill = document.querySelector("[data-park-overlay-fill]");
+const parkOverlayText = document.querySelector("[data-park-overlay-text]");
+
+const closeParkOverlay = function () {
+  if (!parkOverlay) return;
+  parkOverlay.classList.remove("active");
+  document.body.classList.remove("park-overlay-open");
+};
+
+if (parkOverlay && parkOverlayImg && parkOverlayTitle && parkOverlayRating && parkOverlayFill && parkOverlayText) {
+
+  for (let i = 0; i < parkTiles.length; i++) {
+    parkTiles[i].addEventListener("click", function () {
+      const img = this.querySelector("[data-park-img]");
+      const title = this.querySelector("[data-park-title]");
+      const text = this.querySelector("[data-park-text]");
+      const ratingRaw = Number(this.dataset.parkRating || 0);
+      const rating = Math.max(0, Math.min(10, ratingRaw));
+
+      if (img) {
+        parkOverlayImg.src = img.src;
+        parkOverlayImg.alt = img.alt || "";
+      }
+
+      parkOverlayTitle.innerHTML = title ? title.innerHTML : "";
+      parkOverlayRating.textContent = rating.toFixed(rating % 1 === 0 ? 0 : 1) + "/10";
+      parkOverlayFill.style.width = (rating * 10) + "%";
+      parkOverlayText.innerHTML = text ? text.innerHTML : "";
+
+      parkOverlay.classList.add("active");
+      document.body.classList.add("park-overlay-open");
+    });
+  }
+
+  if (parkOverlayClose) {
+    parkOverlayClose.addEventListener("click", closeParkOverlay);
+  }
+
+  parkOverlay.addEventListener("click", function (event) {
+    if (event.target === parkOverlay) closeParkOverlay();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeParkOverlay();
+  });
+
+}
