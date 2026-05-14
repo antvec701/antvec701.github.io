@@ -225,7 +225,7 @@ if (parkOverlay && parkOverlayImg && parkOverlayTitle && parkOverlayRating && pa
       }
 
       parkOverlayTitle.innerHTML = title ? title.innerHTML : "";
-      parkOverlayRating.textContent = rating.toFixed(rating % 1 === 0 ? 0 : 1) + "/10";
+      parkOverlayRating.textContent = rating === 10 ? "10/10" : rating.toFixed(3) + "/10";
       parkOverlayFill.style.width = (rating * 10) + "%";
       parkOverlayText.innerHTML = text ? text.innerHTML : "";
 
