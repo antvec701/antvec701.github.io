@@ -2279,6 +2279,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 35px;
 }
 
+.parks-grid-title {
+  margin-bottom: 20px;
+}
+
 .park-tile {
   cursor: pointer;
   transition: transform var(--transition-1);
