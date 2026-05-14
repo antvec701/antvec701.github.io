@@ -209,6 +209,11 @@ const closeParkOverlay = function () {
   document.body.classList.remove("park-overlay-open");
 };
 
+const formatParkRating = function (rating) {
+  if (rating === 10) return "10/10";
+  return rating.toFixed(3) + "/10";
+};
+
 if (parkOverlay && parkOverlayImg && parkOverlayTitle && parkOverlayRating && parkOverlayFill && parkOverlayText) {
 
   for (let i = 0; i < parkTiles.length; i++) {
@@ -225,7 +230,7 @@ if (parkOverlay && parkOverlayImg && parkOverlayTitle && parkOverlayRating && pa
       }
 
       parkOverlayTitle.innerHTML = title ? title.innerHTML : "";
-      parkOverlayRating.textContent = rating.toFixed(rating % 1 === 0 ? 0 : 1) + "/10";
+      parkOverlayRating.textContent = formatParkRating(rating);
       parkOverlayFill.style.width = (rating * 10) + "%";
       parkOverlayText.innerHTML = text ? text.innerHTML : "";
 
