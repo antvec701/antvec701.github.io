@@ -152,8 +152,81 @@ if (form && formBtn) {
 
 
 // page navigation variables
+// const navigationLinks = document.querySelectorAll("[data-nav-link]");
+// const pages = document.querySelectorAll("[data-page]");
+
+// page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
+
+const activatePage = function(targetPage) {
+
+  for (let j = 0; j < pages.length; j++) {
+
+    const pageName = pages[j].dataset.page.trim().toLowerCase();
+
+    pages[j].classList.toggle(
+      "active",
+      targetPage === pageName
+    );
+
+  }
+
+  for (let j = 0; j < navigationLinks.length; j++) {
+
+    const navName =
+      navigationLinks[j]
+        .textContent
+        .trim()
+        .toLowerCase();
+
+    navigationLinks[j].classList.toggle(
+      "active",
+      targetPage === navName
+    );
+
+  }
+
+  window.scrollTo(0, 0);
+
+};
+
+
+// activate from URL hash on page load
+const hashPage =
+  window.location.hash
+    .replace("#", "")
+    .replace(/-/g, " ")
+    .toLowerCase();
+
+if (hashPage) {
+  activatePage(hashPage);
+}
+
+
+// add event to nav links
+for (let i = 0; i < navigationLinks.length; i++) {
+
+  navigationLinks[i].addEventListener("click", function () {
+
+    const targetPage =
+      this.textContent
+        .trim()
+        .toLowerCase();
+
+    activatePage(targetPage);
+
+    // update URL hash
+    const hash =
+      targetPage
+        .replace(/\s+/g, "-")
+        .replace(/\//g, "");
+
+    window.location.hash = hash;
+
+  });
+
+}
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
