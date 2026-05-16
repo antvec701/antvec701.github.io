@@ -2438,6 +2438,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   line-height: 1.7;
 }
 
+body.park-overlay-open {
+  overflow: hidden;
+}
+
 .park-best-categories {
   margin-bottom: 25px;
 }
