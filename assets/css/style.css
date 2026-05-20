@@ -2463,8 +2463,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 body.park-overlay-open {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 
 .park-best-categories {
