@@ -193,11 +193,19 @@ const activatePage = function(targetPage) {
 
 
 // activate from URL hash on page load
-const hashPage =
+const pageHashMap = {
+  "aboutcv": "about/cv",
+  "research": "research",
+  "teaching": "teaching",
+  "national-parks": "national parks"
+};
+
+const rawHash =
   window.location.hash
     .replace("#", "")
-    .replace(/-/g, " ")
     .toLowerCase();
+
+const hashPage = pageHashMap[rawHash];
 
 if (hashPage) {
   activatePage(hashPage);
@@ -217,36 +225,38 @@ for (let i = 0; i < navigationLinks.length; i++) {
     activatePage(targetPage);
 
     // update URL hash
-    const hash =
-      targetPage
-        .replace(/\s+/g, "-")
-        .replace(/\//g, "");
+    const pageToHashMap = {
+      "about/cv": "aboutcv",
+      "research": "research",
+      "teaching": "teaching",
+      "national parks": "national-parks"
+    };
 
-    window.location.hash = hash;
+    window.location.hash = pageToHashMap[targetPage] || "";
 
   });
 
 }
 
 // add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+// for (let i = 0; i < navigationLinks.length; i++) {
+//   navigationLinks[i].addEventListener("click", function () {
 
-    const targetPage = this.textContent.trim().toLowerCase();
+//     const targetPage = this.textContent.trim().toLowerCase();
 
-    for (let j = 0; j < pages.length; j++) {
-      const pageName = pages[j].dataset.page.trim().toLowerCase();
-      pages[j].classList.toggle("active", targetPage === pageName);
-    }
+//     for (let j = 0; j < pages.length; j++) {
+//       const pageName = pages[j].dataset.page.trim().toLowerCase();
+//       pages[j].classList.toggle("active", targetPage === pageName);
+//     }
 
-    for (let j = 0; j < navigationLinks.length; j++) {
-      navigationLinks[j].classList.toggle("active", navigationLinks[j] === this);
-    }
+//     for (let j = 0; j < navigationLinks.length; j++) {
+//       navigationLinks[j].classList.toggle("active", navigationLinks[j] === this);
+//     }
 
-    window.scrollTo(0, 0);
+//     window.scrollTo(0, 0);
 
-  });
-}
+//   });
+// }
 
 
 // collapsible research paper details
