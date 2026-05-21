@@ -2604,3 +2604,14 @@ body.park-overlay-open {
 .national-parks .clients-item.vertical {
   min-height: 410px;
 }
+
+
+.teaching-note {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+
+  margin-top: -8px;
+  margin-bottom: 18px;
+}
