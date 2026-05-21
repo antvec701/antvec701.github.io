@@ -2378,6 +2378,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 0;
 }
 
+.teaching p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
 
 
 
