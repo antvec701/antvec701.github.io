@@ -829,6 +829,10 @@ main {
 
 }
 
+.mini-testimonial-text p {
+  margin-bottom: 0;
+}
+
 
 /**
  * #testimonials-modal
